@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Query Result</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>SQL Query Form</h1>
+        <form action="/submit" method="POST">
+            <input type="text" name="write_query"><br><br>
+            <input type="submit" value="Submit">
+            <input type="reset" value="reset">
+        </form>
+    </div>
+    
+    <h1>Query result</h1>
+    <table>
+        <tr>
+            {%for row in columns%}
+            <th>{{row[0]}}</th>
+            {%endfor%}
+        </tr>
+        {%for row in data%}
+        <tr>
+            {%for j in row%}
+            <td>{{j}}</td>
+            {%endfor%}
+        </tr>
+        {%endfor%}
+    </table>
+    
+</body>
+</html>

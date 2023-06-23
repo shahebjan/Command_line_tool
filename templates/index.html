@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SQL Query Form</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>SQL Query Form</h1>
+        <form action="/submit" method="POST">
+            <input type="text" name="write_query"><br><br>
+            <input type="submit" value="Submit">
+            <input type="reset" value="reset">
+        </form>
+    </div>
+</body>
+</html>
